@@ -1,4 +1,4 @@
 ### project setting
-## npm install
+# npm install
 ### project run hot loading server
-## npm run dev
+# npm run dev
