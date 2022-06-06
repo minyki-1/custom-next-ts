@@ -2,7 +2,7 @@ import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap'); */
   ${normalize}
   *,
   *::before,
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
   * {
-    font-family: "Noto Sans KR", sans-serif;
+    /* font-family: "Noto Sans KR", sans-serif; */
     background-color: initial;
     margin: 0px;
     padding: 0px;
