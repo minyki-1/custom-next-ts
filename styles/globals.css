@@ -8,6 +8,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   width: 100%;
   min-height: 100%;
+  background-color:#202020;
+  color:#e5e5e5;
 }
 
 code {

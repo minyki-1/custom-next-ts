@@ -12,8 +12,6 @@ const Home: NextPage = () => {
 const Container = styled.div`
   width:100vw;
   min-height:100vh;
-  background-color:#202020;
-  color:#e5e5e5;
   font-size:18px;
 ` 
 
