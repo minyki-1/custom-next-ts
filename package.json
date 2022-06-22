@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next dev",
     "simul": "next start",
-    "lint": "next lint",
-    "export" : "next build && next export && firebase deploy --only hosting"
+    "hosting": "npm run build && npm run export && firebase deploy --only hosting",
+    "export": "next export"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
