@@ -4,7 +4,7 @@
 
 ## npm
 ### `npm install` to install package
-### `npm start` to start live server
+### `npm start` to start live server 3003 port
 
 <br>
 
@@ -16,4 +16,4 @@
 ### `yarn add @yarnpkg/sdks -D` to setting typescript
 ### `yarn dlx @yarnpkg/sdks vscode` to setting typescript on vscode
 ### `click "{}" on under bar and change version` to setting typescript on vscode
-### `yarn start` to start live server
+### `yarn start` to start live server 3003 port
