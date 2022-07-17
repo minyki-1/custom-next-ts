@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next dev",
+    "start": "start http://localhost:3003 && next dev -p 3003",
     "simul": "next start",
-    "hosting": "npm run build && npm run export && firebase deploy --only hosting",
     "export": "next export"
   },
   "dependencies": {
