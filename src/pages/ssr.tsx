@@ -16,7 +16,7 @@ const SsrPage: NextPage<{ data: { data: string } }> = ({ data }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   // const SSR = withSSRContext({ req });
   // const { data } = await SSR.API.graphql({
   //   query: getPost,
@@ -25,11 +25,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   //   }
   // });
 
-  const { rawHeaders } = req;
-  const newRawHeaders: { [key: string]: string } = {};
-  rawHeaders.map((data, i) => i % 2 === 0 ? newRawHeaders[data] = rawHeaders[i + 1] : null);
-
-  const fetchResult = await fetch(`http://${newRawHeaders.Host}/api/hello`).then(response => response.json());
+  const originUrl = req.headers.host || "http://localhost:3003";
+  const fetchUrl = `${originUrl.search("http://") !== -1 ? originUrl : ("http://" + originUrl)}/api/hello`;
+  const fetchResult = await fetch(fetchUrl).then(response => response.json());
 
   return {
     props: {
