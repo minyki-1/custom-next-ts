@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start",
-    "simul": "start http://localhost:3003 && next dev -p 3003",
+    "start": "npx kill-port 8080 && start http://localhost:8080 && next start -p 8080",
+    "simul": "npx kill-port 8080 && start http://localhost:8080 && next dev -p 8080",
     "export": "next export"
   },
   "dependencies": {
