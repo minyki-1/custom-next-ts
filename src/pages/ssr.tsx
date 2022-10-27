@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const SsrPage = ({ data }: { data: { data: string } }) => {
+export default function SsrPage({ data }: { data: { data: string } }) {
   const ssrData = data.data;
   return (
     <Container>
@@ -25,5 +25,3 @@ const Container = styled.div`
   width:100vw;
   min-height:100vh;
 `
-
-export default SsrPage
