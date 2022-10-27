@@ -1,7 +1,6 @@
-import type { GetServerSideProps, NextPage } from 'next'
 import styled from 'styled-components'
 
-const SsrPage: NextPage<{ data: { data: string } }> = ({ data }) => {
+const SsrPage = ({ data }: { data: { data: string } }) => {
   const ssrData = data.data;
   return (
     <Container>
@@ -10,8 +9,8 @@ const SsrPage: NextPage<{ data: { data: string } }> = ({ data }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const originUrl = req.headers.host || "http://localhost:3003";
+export const getServerSideProps = async ({ req }:any) => {
+  const originUrl = req.headers.host || "http://localhost:8080";
   const fetchUrl = `${originUrl.search("http://") !== -1 ? originUrl : ("http://" + originUrl)}/api/hello`;
   const fetchResult = await fetch(fetchUrl).then(response => response.json());
 
