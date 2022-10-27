@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Home = () => {
+export default function Home() {
   return (
     <Container>
       My Next WebApp
