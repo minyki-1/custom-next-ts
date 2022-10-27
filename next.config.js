@@ -1,5 +1,6 @@
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   compiler: {
     styledComponents: true,
   },
@@ -9,5 +10,7 @@ module.exports = {
       use: ['@svgr/webpack'],
     })
     return config
-  },
+  }
 }
+
+module.exports = nextConfig
