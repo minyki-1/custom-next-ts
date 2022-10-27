@@ -13,5 +13,3 @@ const Container = styled.div`
   min-height:100vh;
   font-size:18px;
 ` 
-
-export default Home
