@@ -22,9 +22,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-*{
-	outline: none;
-}
 body {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
