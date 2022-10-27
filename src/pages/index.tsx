@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
 import styled from 'styled-components'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <Container>
       My Next WebApp
