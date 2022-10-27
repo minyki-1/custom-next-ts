@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export default function Home() {
   return (
     <Container>
-      My Next WebApp
+      <h1>My Next WebApp</h1>
     </Container>
   )
 }
@@ -11,5 +11,4 @@ export default function Home() {
 const Container = styled.div`
   width:100vw;
   min-height:100vh;
-  font-size:18px;
-` 
+`
