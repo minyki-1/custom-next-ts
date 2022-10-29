@@ -4,7 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+.vscode
+
+# yarn
 .yarn
+.yarn.lock
+/.yarn/
+.yarnrc.yml
 
 # testing
 /coverage
