@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "npm run open && next start -p 8080",
-    "simul": "npm run open && next dev -p 8080",
+    "dev": "npm run open && next dev -p 8080",
+    "build": "next build",
     "export": "next export",
-    "open": "npx kill-port 8080 && start http://localhost:8080/"
+    "start": "npm run open && next start -p 8080",
+    "open": "npx kill-port 8080 && start http://localhost:8080/",
+    "setYarnBerry":"npm install -g yarn && yarn set version berry && yarn install && yarn add react-is && yarn add @yarnpkg/sdks -D && yarn dlx @yarnpkg/sdks vscode"
   },
   "dependencies": {
     "babel-plugin-styled-components": "latest",
