@@ -8,7 +8,7 @@
     "export": "next export",
     "start": "npm run open && next start -p 8080",
     "open": "npx kill-port 8080 && start http://localhost:8080/",
-    "setYarnBerry":"npm install -g yarn && yarn set version berry && yarn install && yarn add react-is && yarn add @yarnpkg/sdks -D && yarn dlx @yarnpkg/sdks vscode"
+    "yarn2": "npm install -g yarn && yarn set version berry && yarn install && yarn add react-is && yarn dlx @yarnpkg/sdks vscode"
   },
   "dependencies": {
     "babel-plugin-styled-components": "latest",
