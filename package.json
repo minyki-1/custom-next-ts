@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run open && next dev -p 8080",
-    "build": "next build",
-    "export": "next export",
-    "start": "npm run open && next start -p 8080",
-    "open": "npx kill-port 8080 && start http://localhost:8080/",
+    "dev": "npm run open && if exist %cd%\/node_modules ( next dev -p 4000 ) else ( yarn run yarndev )",
+    "build": "if exist %cd%\/node_modules ( next build ) else ( yarn run yarnbuild )",
+    "start": "npm run open && if exist %cd%\/node_modules ( next start -p 4000 ) else ( yarn run yarnstart )",
+    "export": "if exist %cd%\/node_modules ( next export ) else ( yarn run yarnexport )",
+    "yarndev": "next dev -p 4000",
+    "yarnbuild": "next build",
+    "yarnexport": "next export",
+    "yarnstart": "next start -p 4000",
+    "open": "npx kill-port 4000 && start http://localhost:4000",
     "yarn2": "npm install -g yarn && yarn set version berry && yarn install && yarn add react-is && yarn dlx @yarnpkg/sdks vscode"
   },
   "dependencies": {
