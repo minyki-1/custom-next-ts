@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
-export default function SsrPage({ data }: { data: { data: string } }) {
-  const ssrData = data.data;
+export default function Sample() {
   return (
     <Container>
-      {ssrData}
+      <h1>Sample Page</h1>
     </Container>
   )
 }
 
-export const getServerSideProps = async ({ req }:any) => {
-  const originUrl = req.headers.host || "http://localhost:8080";
+const Container = styled.div`
+  width:100vw;
+  min-height:100vh;
+`
+
+// SSR
+export const getServerSideProps = async ({ req }: any) => {
+  const originUrl = req.headers.host;
   const fetchUrl = `${originUrl.search("http://") !== -1 ? originUrl : ("http://" + originUrl)}/api/hello`;
   const fetchResult = await fetch(fetchUrl).then(response => response.json());
 
@@ -21,7 +26,5 @@ export const getServerSideProps = async ({ req }:any) => {
   }
 }
 
-const Container = styled.div`
-  width:100vw;
-  min-height:100vh;
-`
+// No prerender
+// export default dynamic(() => Promise.resolve(NoneSsr), { ssr: false });
