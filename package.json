@@ -26,8 +26,6 @@
     "@svgr/webpack": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@types/styled-components": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "typescript": "latest"
