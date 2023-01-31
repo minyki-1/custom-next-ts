@@ -12,7 +12,7 @@
     "start": "next start -p 4000",
     "export": "next export",
     "open": "npx kill-port 4000 && start http://localhost:4000",
-    "yarn2": "npm install -g yarn && yarn set version berry && yarn install && yarn add react-is && yarn dlx @yarnpkg/sdks vscode"
+    "yarn2": "npm install -g yarn && del yarn.lock .yarnrc.yml && yarn set version berry && yarn install && yarn add react-is && yarn dlx @yarnpkg/sdks vscode"
   },
   "dependencies": {
     "babel-plugin-styled-components": "latest",
